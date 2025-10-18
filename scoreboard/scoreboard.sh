@@ -20,9 +20,4 @@ done
 scores_file="scores.txt"
 touch $scores_file
 
-while read -r name score; do
-  echo "Name: $name, Score: $score"
-done < scores.txt
-
-
-
+awk 'NF==2 { print $1, "has", $2, "score" }' scores.txt

@@ -6,3 +6,4 @@ while read name value; do
   echo "Name: $name, Value: $value"
 done < test-file-2.txt
 
+awk '{ print "Name:", $1, "Score:", $2 }' test-file-2.txt
