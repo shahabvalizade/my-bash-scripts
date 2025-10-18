@@ -1,5 +1,5 @@
 #!/bin/bash
-while read -r name value; do
+while read name value; do
   if [[ -z "$name" || -z "$value" ]]; then
     continue
   fi
