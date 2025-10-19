@@ -16,5 +16,4 @@ case $color in
     purple)
         echo 5
         ;;
-    *)
 esac

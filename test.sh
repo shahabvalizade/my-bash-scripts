@@ -1,2 +1,2 @@
 #!/bin/bash
-# This is a test file to practive bash scripts
+# This is a test file to practice bash scripts
