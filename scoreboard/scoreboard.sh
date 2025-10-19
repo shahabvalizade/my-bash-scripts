@@ -29,6 +29,7 @@ fi
 
 scores_file="scores.txt"
 touch $scores_file
+tmp_file="$(mktemp)"
 
 awk -v username="$username" -v addpoint="$addpoint" '
   BEGIN { found=0 }
@@ -42,4 +43,4 @@ awk -v username="$username" -v addpoint="$addpoint" '
           print username, 0 + addpoint
       }
   }
-' "scores.txt"
+' "$scores_file" > "$tmp_file" && mv "$tmp_file" "$scores_file"
